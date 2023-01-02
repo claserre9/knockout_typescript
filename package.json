@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "type": "commonjs",
   "scripts": {
-    "build" : "webpack"
+    "build": "tsc && webpack"
   },
   "dependencies": {
+    "@amcharts/amcharts5": "^5.2.46",
     "knockout": "^3.5.1",
     "source-map-loader": "^4.0.1"
   },
