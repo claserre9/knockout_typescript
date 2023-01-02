@@ -10,9 +10,7 @@ export default class TimeSheet {
         this.timesheets.push(new TimeSheetLine())
     }
 
-    public removeTimeSheetLine(data : any, index: any ){
-        console.log(data)
-        console.log(index)
+    public removeTimeSheetLine(index){
         let timesheets = this.timesheets()
         timesheets.splice(index, 1)
         this.timesheets(timesheets)
