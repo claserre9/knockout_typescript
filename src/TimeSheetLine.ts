@@ -1,11 +1,22 @@
 import * as ko from "knockout";
+
 export default class TimeSheetLine{
-
-    public project = ko.observableArray(["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"])
-    public hour = ko.observable(0)
-
+    public id = ko.observable()
+    public project = ko.observableArray([])
+    public hour = ko.observable()
     public chosenProject = ko.observable()
 
+    constructor() {
+        this.init()
+    }
+    init() {
+        this.id(Date.now())
+        this.fetchProjects().then((projects)=>this.project(projects))
+    }
+
+    fetchProjects(){
+        return Promise.resolve(["Project 1", "Project 2", "Project 3", "Project 4", "Project 5"])
+    }
 
     public handleDragStart (data: any, event: any) {
         event.dataTransfer.setData("text/plain", event.target.id)

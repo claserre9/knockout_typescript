@@ -1,0 +1,19 @@
+{
+  "timesheets": [
+    {
+      "id": 1673158353382,
+      "hour": "7",
+      "chosenProject": "Project 2"
+    },
+    {
+      "id": 1673158471094,
+      "hour": "10",
+      "chosenProject": "Project 4"
+    },
+    {
+      "id": 1673158571279,
+      "hour": "12",
+      "chosenProject": "Project 2"
+    }
+  ]
+}

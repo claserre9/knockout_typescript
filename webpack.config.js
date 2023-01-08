@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: "none",
     entry: './src/Index.ts',
     devtool: 'inline-source-map',
     module: {
@@ -18,5 +19,6 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'public/dist'),
-    },
+        clean: true,
+    }
 };
